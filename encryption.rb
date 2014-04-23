@@ -1,4 +1,5 @@
 # Returns the integer ordinal of a one character string.
+# Uppercase characters (A-Z) has the range 65 to 90.
 p ' '.ord
 p 'a'.ord
 p 'A'.ord
