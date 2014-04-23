@@ -9,4 +9,11 @@ p 97.chr
 p 65.chr
 
 def encrypt(shift = 0, string)(output)
+  # Loop through all characters in the string.
+  string.each do |char|
+    # Ignore whitespace characters.
+    if char.ord.eql?(32)
+      output += char
+    end
+  end
 end
