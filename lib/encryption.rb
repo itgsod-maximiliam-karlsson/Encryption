@@ -10,7 +10,7 @@
 # p 65.chr
 
 def encrypt(input, offset = 0)(output)
-  input.each do |char|
+  input.each_char do |char|
     if char.eql?(' ')
       output += char
     else
