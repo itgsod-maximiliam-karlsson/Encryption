@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../encryption.rb'
+require_relative '../lib/encryption.rb'
 
 describe 'encryption' do
   before do
