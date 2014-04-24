@@ -10,9 +10,7 @@
 # p 65.chr
 
 def encrypt(input, offset = 0)(output)
-  # Loop through all characters in the string.
   input.each do |char|
-    # Ignore whitespace characters.
     if char.ord.eql?(32)
       output += char
     else
