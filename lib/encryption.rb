@@ -9,7 +9,7 @@
 # p 97.chr
 # p 65.chr
 
-def encrypt(input, offset = 0)(output)
+def encrypt(input, offset)(output)
   input.each_char do |char|
     if char.eql?(' ')
       output += char
