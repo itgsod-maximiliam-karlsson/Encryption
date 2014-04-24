@@ -13,11 +13,11 @@ describe 'encryption' do
   end
 
   it 'should raise ArgumentError with correct error message if called with empty string' do
-    expect { encrypt('', 3)}.to raise_error ArgumentError, 'String must not be empty'
+    expect { encrypt('', 3)}.to raise_error ArgumentError, 'String must not be empty!'
   end
 
   it 'should raise ArgumentError with correct error message if called with an offset of 0' do
-    expect { encrypt(@cleartext, 0)}.to raise_error ArgumentError, 'Offset must not be zero'
+    expect { encrypt(@cleartext, 0)}.to raise_error ArgumentError, 'Offset must not be zero!'
   end
 
   it 'should return a string' do
