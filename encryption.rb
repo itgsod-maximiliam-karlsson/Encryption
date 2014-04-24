@@ -16,10 +16,10 @@ def encrypt(input, offset = 0)(output)
     if char.ord.eql?(32)
       output += char
     else
-      output += shift(char, shift)
+      output += offset(char, offset)
     end
   end
 end
 
-def shift(char, amount)
+def offset(char, amount)
 end
