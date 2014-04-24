@@ -9,7 +9,7 @@ p 32.chr
 p 97.chr
 p 65.chr
 
-def encrypt(shift = 0, input)(output)
+def encrypt(input, offset = 0)(output)
   # Loop through all characters in the string.
   input.each do |char|
     # Ignore whitespace characters.
