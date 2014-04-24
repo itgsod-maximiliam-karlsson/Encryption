@@ -11,7 +11,7 @@
 
 def encrypt(input, offset = 0)(output)
   input.each do |char|
-    if char.ord.eql?(32)
+    if char.eql?(' ')
       output += char
     else
       output += offset(char, offset)
