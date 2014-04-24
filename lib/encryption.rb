@@ -9,14 +9,9 @@
 # p 97.chr
 # p 65.chr
 
-def encrypt(input, offset)(output)
-  input.each_char do |char|
-    if char.eql?(' ')
-      output += char
-    else
-      output += offset(char, offset)
-    end
-  end
+def encrypt(input, offset)
+  raise ArgumentError, 'String must not be empty!' if input.empty?
+  raise ArgumentError, 'Offset must not be zero!' if offset == 0
 end
 
 def offset(char, amount)
