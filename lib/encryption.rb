@@ -20,5 +20,5 @@ def encrypt(input, offset)
   output
 end
 
-def offset(char, amount)
+def offset(character, amount)
 end
