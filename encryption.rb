@@ -15,6 +15,11 @@ def encrypt(shift = 0, input)(output)
     # Ignore whitespace characters.
     if char.ord.eql?(32)
       output += char
+    else
+      output += shift(char)
     end
   end
+end
+
+def shift(char)
 end
