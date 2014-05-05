@@ -12,13 +12,20 @@
 def encrypt(input, offset)
   raise ArgumentError, 'String must not be empty!' if input.empty?
   raise ArgumentError, 'Offset must not be zero!' if offset == 0
+
+  upcase_input = input.upcase
   output = ""
 
-  input.each_char do |char|
+  upcase_input.each_char do |char|
+    char == " " ? output += char : output += offset(char, offset).chr
   end
 
   output
 end
 
 def offset(character, amount)
+  offset_char = character.ord + amount
+  return offset_char if offset_char <= 90
+
+  (90 - offset_char).abs + 64
 end
