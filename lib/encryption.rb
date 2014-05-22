@@ -13,7 +13,9 @@ def encrypt(input, offset)
 end
 
 def offset(character, offset)
+  alpha_start, alpha_end = 65, 90
   offset_char = character.ord + offset
-  return offset_char if offset_char <= 90
-  (offset_char - 90) + 64
+
+  return offset_char if offset_char <= alpha_end
+  (offset_char - alpha_end) + (alpha_start - 1)
 end
