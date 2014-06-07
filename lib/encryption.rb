@@ -16,6 +16,6 @@ def offset(character, offset)
   alpha_start, alpha_end = 65, 90
   offset_char = character.ord + offset
 
-  return offset_char if offset_char <= alpha_end
+  return offset_char if offset_char.between?(alpha_start, alpha_end)
   (offset_char - alpha_end) + (alpha_start - 1)
 end
